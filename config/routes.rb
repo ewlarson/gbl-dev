@@ -43,4 +43,5 @@ mount Geoblacklight::Engine => 'geoblacklight'
           concerns :gbl_downloadable
         end
         resources :download, only: [:show]
+mount Blacklight::Allmaps::Engine => '/'
 end

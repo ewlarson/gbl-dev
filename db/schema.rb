@@ -10,7 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_05_14_153250) do
+ActiveRecord::Schema[7.1].define(version: 2024_05_14_161028) do
+  create_table "blacklight_allmaps_sidecars", force: :cascade do |t|
+    t.string "solr_document_id"
+    t.string "document_type", default: "SolrDocument"
+    t.string "manifest_id"
+    t.boolean "annotated", default: false
+    t.string "allmaps_id"
+    t.text "iiif_manifest"
+    t.text "allmaps_annotation"
+    t.bigint "solr_version"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["allmaps_id"], name: "index_blacklight_allmaps_sidecars_on_allmaps_id"
+    t.index ["manifest_id"], name: "index_blacklight_allmaps_sidecars_on_manifest_id"
+    t.index ["solr_document_id"], name: "index_blacklight_allmaps_sidecars_on_solr_document_id"
+  end
+
   create_table "bookmarks", force: :cascade do |t|
     t.integer "user_id", null: false
     t.string "user_type"

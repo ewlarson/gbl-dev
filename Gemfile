@@ -69,9 +69,7 @@ gem "blacklight", "~> 7.0"
 gem "geoblacklight", "~> 4.0"
 gem "sprockets", "< 4.0"
 
-group :development, :test do
-  gem "blacklight_lando", "~> 0.3.0"
-end
+
 gem "rsolr", ">= 1.0", "< 3"
 gem "bootstrap", "~> 4.0"
 gem "twitter-typeahead-rails", "0.11.1.pre.corejavascript"
@@ -80,3 +78,11 @@ gem "jquery-rails"
 gem "devise"
 gem "devise-guests", "~> 0.8"
 gem "vite_rails", "~> 3.0"
+
+# GBL DEV 
+group :development, :test do
+  gem "solr_wrapper", ">= 0.3"
+  gem "blacklight_lando", "~> 0.3.0"
+end
+
+gem "blacklight_allmaps", "~> 0.4.0"

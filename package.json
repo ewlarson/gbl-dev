@@ -1,6 +1,7 @@
 {
   "dependencies": {
-    "@geoblacklight/frontend": "^4.4"
+    "@geoblacklight/frontend": "^4.4",
+    "blacklight-allmaps": "^0.3.1"
   },
   "devDependencies": {
     "vite": "^5.0.0",
