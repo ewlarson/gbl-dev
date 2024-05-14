@@ -86,3 +86,5 @@ group :development, :test do
 end
 
 gem "blacklight_allmaps", "~> 0.4.0"
+gem "geoblacklight_sidecar_images", git: "https://github.com/geoblacklight/geoblacklight_sidecar_images.git", branch: "feature/rails-7.1"
+

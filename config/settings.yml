@@ -89,7 +89,11 @@ FIELDS:
 
 # Institution deployed at
 INSTITUTION: 'Stanford'
-
+INSTITUTION_LOCAL_NAME: 'Princeton'
+INSTITUTION_GEOSERVER_URL: 'https://geoserver.princeton.edu'
+PROXY_GEOSERVER_URL: 'http://localhost:3000'
+PROXY_GEOSERVER_AUTH: 'Basic base64encodedusername:password'
+GBLSI_THUMBNAIL_FIELD: 'thumbnail_path_ss'
 # Metadata shown in tool panel
 METADATA_SHOWN:
   - 'mods'
