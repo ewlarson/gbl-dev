@@ -70,7 +70,7 @@ gem "geoblacklight", "~> 4.0"
 gem "sprockets", "< 4.0"
 
 group :development, :test do
-  gem "solr_wrapper", ">= 0.3"
+  gem "blacklight_lando", "~> 0.3.0"
 end
 gem "rsolr", ">= 1.0", "< 3"
 gem "bootstrap", "~> 4.0"

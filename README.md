@@ -1,24 +1,27 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+GeoBlacklight Development
 
-Things you may want to cover:
+## Quick Start
 
-* Ruby version
+### Steps
 
-* System dependencies
+#### 1. Start Solr
+```bash
+lando start
+```
+[Solr running at http://localhost:54701](http://localhost:54701)
 
-* Configuration
+#### 2. Start Rails
 
-* Database creation
+```bash
+bin/rails s
+```
 
-* Database initialization
+[Rails running at http://localhost:3000](http://localhost:3000)
 
-* How to run the test suite
+#### 3. Harvest GeoBlacklight Docs
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```bash
+bin/rails geoblacklight:index:seed[remote]
+```

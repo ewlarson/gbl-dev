@@ -1,10 +1,13 @@
-load_defaults: 7.37.0
+load_defaults: 7.19.2
 development:
   adapter: solr
-  url: <%= ENV['SOLR_URL'] || "http://127.0.0.1:8983/solr/blacklight-core" %>
+  url: <%= ENV['SOLR_URL'] || ENV['lando_development_solr'] %>
 test: &test
   adapter: solr
-  url: <%= ENV['SOLR_URL'] || "http://127.0.0.1:8983/solr/blacklight-core" %>
+  url: <%= ENV['SOLR_URL'] ||  ENV['lando_test_solr'] %>
 production:
   adapter: solr
-  url: <%= ENV['SOLR_URL'] || "http://127.0.0.1:8983/solr/blacklight-core" %>
+  url: <%= ENV['SOLR_URL'] %>
+staging:
+  adapter: solr
+  url: <%= ENV['SOLR_URL'] %>
