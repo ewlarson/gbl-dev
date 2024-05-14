@@ -5,6 +5,7 @@
 * GeoBlacklight v4.4
 * BlacklightLando v0.3.0
 * Blacklight::Allmaps v0.4.0
+* GeoBlacklight Sidecar Images v1.0.0
 
 ### Steps
 
@@ -21,7 +22,7 @@ cd gbl-dev
 lando start
 ```
 
-[Solr running at http://localhost:54701](http://localhost:54701)
+[View Solr](http://localhost:54701)
 
 #### 3. Start Rails
 
@@ -29,7 +30,7 @@ lando start
 bin/rails s
 ```
 
-[Rails running at http://localhost:3000](http://localhost:3000)
+[View Rails App](http://localhost:3000)
 
 #### 4. Harvest GeoBlacklight Docs
 
@@ -59,3 +60,14 @@ Populate the Georeferenced Facet
 bin/rails blacklight_allmaps:index:georeferenced_facet
 ```
 
+[Allmaps example](http://localhost:3000/catalog/p16022coll230:360)
+
+#### 5. GeoBlacklight Sidecar Images
+
+Harvest Thumbnails
+
+```bash
+bin/rails gblsci:images:harvest_all
+```
+
+[Thumbnails in search results](http://localhost:3000/?search_field=all_fields)
